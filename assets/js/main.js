@@ -112,6 +112,19 @@ document.addEventListener('DOMContentLoaded', function () {
     status.focus();
   }
 
+  function addBotTrap(form) {
+    if (form.querySelector('[name="website"]')) return;
+    var trap = document.createElement('input');
+    trap.type = 'text';
+    trap.name = 'website';
+    trap.autocomplete = 'off';
+    trap.tabIndex = -1;
+    trap.setAttribute('aria-hidden', 'true');
+    trap.style.position = 'absolute';
+    trap.style.left = '-10000px';
+    form.appendChild(trap);
+  }
+
   function sendForm(form) {
     var submit = form.querySelector('[type="submit"]');
     if (!formEndpoint) {
@@ -138,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- Egyszerű űrlapok (kapcsolat, partneri igény) ---------- */
   document.querySelectorAll('[data-simple-form]').forEach(function (form) {
+    addBotTrap(form);
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
@@ -266,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Beküldés: konfigurált végponttal valódi POST, anélkül őszinte figyelmeztetés.
     var form = wizard.querySelector('#sosForm');
     if (form) {
+      addBotTrap(form);
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (!validateStep(current)) return;
