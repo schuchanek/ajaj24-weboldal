@@ -6,6 +6,14 @@
 <title>SOS hibabejelentés — ajaj24</title>
 <meta name="description" content="Jelentsd be a hibát 2 perc alatt, fotóval. Zár, víz, dugulás, villany, fűtés — nonstop otthoni gyorsszolgálat Budapesten.">
 <link rel="canonical" href="https://www.ajaj24.hu/sos.html">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/brand/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:image" content="https://www.ajaj24.hu/assets/brand/social-share-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="noindex, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +25,7 @@
 <header class="site-header" id="siteHeader">
   <div class="container site-header__inner">
     <a href="index.html" class="logo" aria-label="ajaj24 – főoldal">
-      <span class="logo__mark">!</span>ajaj<span class="logo__24">24</span>
+      <img class="logo__image" src="assets/brand/logo-horizontal.svg" alt="ajaj24 gyorsszolgálat" width="1000" height="240">
     </a>
     <nav class="main-nav" aria-label="Fő navigáció">
       <a href="szolgaltatasok.html">Szolgáltatások</a>
@@ -143,7 +151,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
               <strong>Fotó feltöltése</strong>
               <div style="font-size:.85rem;color:var(--paper-dimmer);margin-top:.3rem;">kattints, vagy húzd ide a képet</div>
-              <input type="file" id="photoInput" accept="image/*" multiple>
+              <input type="file" id="photoInput" name="photos[]" accept="image/jpeg,image/png,image/webp,image/heic" multiple>
             </label>
             <div class="upload-preview" id="uploadPreview"></div>
             <div class="field" style="margin-top:1.6rem;">
@@ -262,7 +270,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col footer-brand">
-        <a href="index.html" class="logo"><span class="logo__mark">!</span>ajaj<span class="logo__24">24</span></a>
+        <a href="index.html" class="logo"><img class="logo__image" src="assets/brand/logo-horizontal.svg" alt="ajaj24 gyorsszolgálat" width="1000" height="240"></a>
         <p>0–24 órás otthoni gyorsszolgálat Budapest egész területén.</p>
       </div>
       <div class="footer-col">
