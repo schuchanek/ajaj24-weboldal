@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SOS hibabejelentés — ajaj24</title>
+<meta name="description" content="Jelentsd be a hibát 2 perc alatt, fotóval. Zár, víz, dugulás, villany, fűtés — nonstop otthoni gyorsszolgálat Budapesten.">
+<link rel="canonical" href="https://www.ajaj24.hu/sos.html">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo" aria-label="ajaj24 – főoldal">
+      <span class="logo__mark">!</span>ajaj<span class="logo__24">24</span>
+    </a>
+    <nav class="main-nav" aria-label="Fő navigáció">
+      <a href="szolgaltatasok.html">Szolgáltatások</a>
+      <a href="arak.html">Árak</a>
+      <a href="tarsashazaknak.html">Cégeknek</a>
+      <a href="rolunk.html">Rólunk</a>
+      <a href="gyik.html">GYIK</a>
+      <a href="kapcsolat.html">Kapcsolat</a>
+    </nav>
+    <div class="site-header__cta">
+      <a href="tel:+36704292739" class="btn btn--ghost btn--sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +36 70 429 2739
+      </a>
+      <a href="sos.html" class="btn btn--sos btn--sm">SEGÍTSÉG KELL</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü megnyitása" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="szolgaltatasok.html">Szolgáltatások</a>
+    <a href="arak.html">Árak</a>
+    <a href="tarsashazaknak.html">Cégeknek / társasházaknak</a>
+    <a href="rolunk.html">Rólunk</a>
+    <a href="gyik.html">GYIK</a>
+    <a href="kapcsolat.html">Kapcsolat</a>
+    <div class="mobile-menu__cta">
+      <a href="tel:+36704292739" class="btn btn--ghost btn--block">+36 70 429 2739</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container text-center">
+      <span class="eyebrow" style="justify-content:center;">SOS hibabejelentés</span>
+      <h1 style="font-size:clamp(2rem,5vw,3rem);margin-top:.6rem;">Mondd el, mi történt.<br>Indulunk.</h1>
+      <p class="lead" style="max-width:52ch;margin-inline:auto;margin-top:1rem;">Kevesebb mint 2 perc. Ha most rögtön beszélnél valakivel, inkább hívj: <a href="tel:+36704292739" style="color:var(--sos-2);font-weight:700;">+36 70 429 2739</a></p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="card wizard" id="sosWizard" style="padding:clamp(1.6rem,4vw,3rem);">
+
+        <div class="wizard__progress">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <form id="sosForm" novalidate enctype="multipart/form-data">
+          <input type="hidden" name="formType" value="sos">
+
+          <!-- 1. LÉPÉS — MI TÖRTÉNT -->
+          <div class="wizard__step is-active">
+            <span class="wizard__stepnum">01 / 05</span>
+            <h2 style="font-size:1.5rem;">Mi történt?</h2>
+            <div class="option-grid" data-radio-required="problem">
+              <div class="option-card">
+                <input type="radio" name="problem" id="p_zar" value="zar">
+                <label for="p_zar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Nem tudok bejutni / Zár</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="problem" id="p_viz" value="viz">
+                <label for="p_viz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s7 7.44 7 11.31a7 7 0 1 1-14 0c0-3.87 7-11.31 7-11.31z"/></svg><span>Folyik a víz</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="problem" id="p_dugulas" value="dugulas">
+                <label for="p_dugulas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8a4 4 0 1 1-4 4"/></svg><span>Dugulás</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="problem" id="p_villany" value="villany">
+                <label for="p_villany"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8z"/></svg><span>Villanyhiba</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="problem" id="p_futes" value="futes">
+                <label for="p_futes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17a2.5 2.5 0 0 0 2.5-2.5c0-1.5-1.5-2-1-3.5.5 1 2.5 2.5 2.5 5A5 5 0 0 1 5 16c0-3 2.5-4.5 2-8 1 1.5 1.5 2.5 1.5 6.5z"/></svg><span>Fűtési probléma</span></label>
+              </div>
+              <div class="option-card">
+                <input type="radio" name="problem" id="p_ajto" value="ajto">
+                <label for="p_ajto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="1"/><circle cx="15" cy="12" r="1" fill="currentColor" stroke="none"/></svg><span>Ajtó / ablak</span></label>
+              </div>
+              <div class="option-card" style="grid-column:1 / -1;">
+                <input type="radio" name="problem" id="p_egyeb" value="egyeb">
+                <label for="p_egyeb" style="flex-direction:row;align-items:center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.6 4.9L2 18.3V22h3.7l7-7.1a4 4 0 0 0 4.9-5.6l-3 3-2-2z"/></svg><span>Egyéb probléma</span></label>
+              </div>
+            </div>
+            <div class="wizard__nav" style="justify-content:flex-end;">
+              <button type="button" class="btn btn--sos" data-next>Tovább</button>
+            </div>
+          </div>
+
+          <!-- 2. LÉPÉS — SÜRGŐSSÉG -->
+          <div class="wizard__step">
+            <span class="wizard__stepnum">02 / 05</span>
+            <h2 style="font-size:1.5rem;">Mennyire sürgős?</h2>
+            <div class="urgency-grid" data-radio-required="urgency">
+              <div class="urgency-card">
+                <input type="radio" name="urgency" id="u_azonnal" value="azonnal">
+                <label for="u_azonnal">AZONNAL <small>most rögtön kell a segítség</small></label>
+              </div>
+              <div class="urgency-card">
+                <input type="radio" name="urgency" id="u_ma" value="ma">
+                <label for="u_ma">MÉG MA <small>ráér néhány óra</small></label>
+              </div>
+              <div class="urgency-card">
+                <input type="radio" name="urgency" id="u_idopont" value="idopont">
+                <label for="u_idopont">IDŐPONTOT KÉREK <small>egyeztetnénk egy időpontot</small></label>
+              </div>
+            </div>
+            <div class="wizard__nav">
+              <button type="button" class="btn btn--ghost" data-prev>Vissza</button>
+              <button type="button" class="btn btn--sos" data-next>Tovább</button>
+            </div>
+          </div>
+
+          <!-- 3. LÉPÉS — FOTÓ -->
+          <div class="wizard__step">
+            <span class="wizard__stepnum">03 / 05</span>
+            <h2 style="font-size:1.5rem;">Mutasd meg a problémát</h2>
+            <p style="margin:.6rem 0 1.4rem;">Egy fotó sokszor többet ér, mint öt perc telefonálás. Nem kötelező, de gyorsabban tudunk segíteni vele.</p>
+            <label class="upload-box" id="uploadBox" for="photoInput">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <strong>Fotó feltöltése</strong>
+              <div style="font-size:.85rem;color:var(--paper-dimmer);margin-top:.3rem;">kattints, vagy húzd ide a képet</div>
+              <input type="file" id="photoInput" accept="image/*" multiple>
+            </label>
+            <div class="upload-preview" id="uploadPreview"></div>
+            <div class="field" style="margin-top:1.6rem;">
+              <label for="f_leiras">Röviden mi történt <span class="opt">(opcionális)</span></label>
+              <textarea id="f_leiras" name="leiras" rows="3" placeholder="Pl.: a konyhai csap alatt szivárog a cső."></textarea>
+            </div>
+            <div class="wizard__nav">
+              <button type="button" class="btn btn--ghost" data-prev>Vissza</button>
+              <button type="button" class="btn btn--sos" data-next>Tovább</button>
+            </div>
+          </div>
+
+          <!-- 4. LÉPÉS — HELYSZÍN -->
+          <div class="wizard__step">
+            <span class="wizard__stepnum">04 / 05</span>
+            <h2 style="font-size:1.5rem;">Hol történt?</h2>
+            <button type="button" class="geo-btn" id="geoBtn" style="margin-top:1.2rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Jelenlegi helyzetem használata
+            </button>
+            <div class="field-row">
+              <div class="field">
+                <label for="f_irsz">Irányítószám</label>
+                <input type="text" id="f_irsz" name="irsz" inputmode="numeric" data-required placeholder="1051">
+              </div>
+              <div class="field">
+                <label for="f_kerulet">Kerület</label>
+                <select id="f_kerulet" name="kerulet" data-required>
+                  <option value="">Válassz…</option>
+                  <option>I. kerület</option><option>II. kerület</option><option>III. kerület</option>
+                  <option>IV. kerület</option><option>V. kerület</option><option>VI. kerület</option>
+                  <option>VII. kerület</option><option>VIII. kerület</option><option>IX. kerület</option>
+                  <option>X. kerület</option><option>XI. kerület</option><option>XII. kerület</option>
+                  <option>XIII. kerület</option><option>XIV. kerület</option><option>XV. kerület</option>
+                  <option>XVI. kerület</option><option>XVII. kerület</option><option>XVIII. kerület</option>
+                  <option>XIX. kerület</option><option>XX. kerület</option><option>XXI. kerület</option>
+                  <option>XXII. kerület</option><option>XXIII. kerület</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f_utca">Utca</label>
+                <input type="text" id="f_utca" name="utca" data-required>
+              </div>
+              <div class="field">
+                <label for="f_hazszam">Házszám</label>
+                <input type="text" id="f_hazszam" name="hazszam" data-required>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f_emelet">Emelet / ajtó <span class="opt">(opcionális)</span></label>
+                <input type="text" id="f_emelet" name="emelet">
+              </div>
+              <div class="field">
+                <label for="f_kapucsengo">Kapucsengő <span class="opt">(opcionális)</span></label>
+                <input type="text" id="f_kapucsengo" name="kapucsengo">
+              </div>
+            </div>
+            <div class="wizard__nav">
+              <button type="button" class="btn btn--ghost" data-prev>Vissza</button>
+              <button type="button" class="btn btn--sos" data-next>Tovább</button>
+            </div>
+          </div>
+
+          <!-- 5. LÉPÉS — ELÉRHETŐSÉG -->
+          <div class="wizard__step">
+            <span class="wizard__stepnum">05 / 05</span>
+            <h2 style="font-size:1.5rem;">Elérhetőség</h2>
+            <div class="field" style="margin-top:1.2rem;">
+              <label for="f_nev">Név</label>
+              <input type="text" id="f_nev" name="nev" data-required autocomplete="name">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f_telefon">Telefonszám</label>
+                <input type="tel" id="f_telefon" name="telefon" data-required autocomplete="tel" placeholder="+36 30 000 0000">
+              </div>
+              <div class="field">
+                <label for="f_email">Email <span class="opt">(opcionális)</span></label>
+                <input type="email" id="f_email" name="email" autocomplete="email">
+              </div>
+            </div>
+            <div class="note-box note-box--sos" style="margin-top:.6rem;">
+              A beküldés előtt még nem történik terhelés vagy foglalás — ez egy hibabejelentés. Az árat és az érkezés részleteit a visszajelzéskor egyeztetjük.
+            </div>
+            <div class="wizard__nav">
+              <button type="button" class="btn btn--ghost" data-prev>Vissza</button>
+              <button type="submit" class="btn btn--sos btn--lg">KÉREK SEGÍTSÉGET</button>
+            </div>
+          </div>
+
+          <!-- 6. LÉPÉS — csak igazolt szerverválasz után jelenik meg -->
+          <div class="wizard__step">
+            <div class="wizard__success">
+              <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <h2>Megkaptuk a bejelentést.</h2>
+              <p class="lead" style="margin-top:.6rem;">Hamarosan jelentkezünk a megadott elérhetőségen.</p>
+              <p style="margin-top:1.6rem;">Ha nagyon sürget az idő, hívj minket most is:<br><a href="tel:+36704292739" style="color:var(--sos-2);font-weight:700;font-size:1.2rem;">+36 70 429 2739</a></p>
+              <a href="index.html" class="btn btn--ghost" style="margin-top:2rem;">Vissza a főoldalra</a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <p class="text-center" style="margin-top:2rem;font-size:.85rem;color:var(--paper-dimmer);max-width:520px;margin-inline:auto;">
+        A feltöltött fotó és az itt megadott adatok kizárólag a hiba elbírálásához és a kapcsolatfelvételhez szükségesek. Részletek: <a href="adatvedelem.html" style="color:var(--paper-dim);text-decoration:underline;">Adatvédelmi tájékoztató</a>.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="logo"><span class="logo__mark">!</span>ajaj<span class="logo__24">24</span></a>
+        <p>0–24 órás otthoni gyorsszolgálat Budapest egész területén.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Szolgáltatások</h4>
+        <ul>
+          <li><a href="zarszerviz.html">Zármentés</a></li>
+          <li><a href="vizszereles.html">SOS vízszerelés</a></li>
+          <li><a href="dugulaselharitas.html">Duguláselhárítás</a></li>
+          <li><a href="villanyszereles.html">SOS villanyszerelés</a></li>
+          <li><a href="futes.html">Fűtés</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Vállalat</h4>
+        <ul>
+          <li><a href="rolunk.html">Rólunk</a></li>
+          <li><a href="arak.html">Árak</a></li>
+          <li><a href="gyik.html">GYIK</a></li>
+          <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Jogi</h4>
+        <ul>
+          <li><a href="adatvedelem.html">Adatvédelem</a></li>
+          <li><a href="aszf.html">ÁSZF</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> ajaj24 — One4U Hungary Kft. · Minden jog fenntartva.</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mobile-tabbar" aria-label="Gyors elérés">
+  <a href="tel:+36704292739" class="mobile-tabbar__item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <span>Hívás</span>
+  </a>
+  <a href="sos.html" class="mobile-tabbar__item mobile-tabbar__item--sos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <span>SOS</span>
+  </a>
+  <button type="button" class="mobile-tabbar__item" id="openChatBtn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <span>Chat</span>
+  </button>
+</nav>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+Tawk_API.onLoad = function(){
+  // Saját stílusú chat-gombot használunk (jobb alsó FAB + mobil alsó sáv),
+  // ezért a tawk.to alap buborékját elrejtjük, hogy ne legyen két gomb egymáson.
+  Tawk_API.hideWidget();
+};
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a7f0cf61d4a11217dfc3880/1k004l8p3';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
