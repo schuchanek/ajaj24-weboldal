@@ -1,0 +1,39 @@
+# ajaj24
+
+> 0–24 órás otthoni gyorsszolgálat Budapesten és a környező településeken. Zármentés, vízszerelés, duguláselhárítás, villanyszerelés és fűtésszerelés egy központi elérhetőségen.
+
+## Főoldal
+- https://www.ajaj24.hu/
+
+## Szolgáltatások
+- https://www.ajaj24.hu/zarszerviz.html
+- https://www.ajaj24.hu/vizszereles.html
+- https://www.ajaj24.hu/dugulaselharitas.html
+- https://www.ajaj24.hu/villanyszereles.html
+- https://www.ajaj24.hu/futes.html
+- https://www.ajaj24.hu/szolgaltatasok.html
+
+## Fontos információk
+- https://www.ajaj24.hu/arak.html
+- https://www.ajaj24.hu/gyik.html
+- https://www.ajaj24.hu/kapcsolat.html
+- https://www.ajaj24.hu/tarsashazaknak.html
+
+## Szolgáltatási területek
+- Budapest
+- Dunakeszi
+- Fót
+- Budakalász
+- Szentendre
+- Pomáz
+- Üröm
+- Göd
+- Veresegyház
+
+## Kapcsolat
+- Telefon: +36 70 429 2739
+- Web: https://www.ajaj24.hu/kapcsolat.html
+
+## Géppel olvasható források
+- Sitemap: https://www.ajaj24.hu/sitemap.xml
+- Robots: https://www.ajaj24.hu/robots.txt
