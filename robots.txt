@@ -1,4 +1,27 @@
 User-agent: *
 Allow: /
 
+# Keresők
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI-alapú keresők és asszisztensek
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://www.ajaj24.hu/sitemap.xml
